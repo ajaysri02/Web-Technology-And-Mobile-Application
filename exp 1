@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Resume Builder</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* =========================
+   GLOBAL STYLING
+========================= */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* Animated premium background */
+body::before {
+    content: "";
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(0,150,255,0.12), transparent 40%);
+    animation: bgMove 12s ease-in-out infinite alternate;
+    z-index:-1;
+}
+
+@keyframes bgMove {
+    from { transform: translate(0,0); }
+    to   { transform: translate(40px,-40px); }
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    padding: 20px;
+    animation: fadeUp 1s ease;
+}
+
+h1 {
+    color: #00e5ff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(0,229,255,0.6);
+}
+
+.highlight {
+    color: #d1ecff;
+    font-weight: bold;
+}
+
+/* =========================
+   NAVBAR PREMIUM
+========================= */
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00e5ff;
+    font-weight: bold;
+    margin: 0 12px;
+    transition: 0.3s;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: rgba(0,229,255,0.2);
+    color: white;
+    box-shadow: 0 0 10px rgba(0,229,255,0.5);
+}
+
+/* =========================
+   GLASS EFFECT SECTIONS
+========================= */
+section {
+    width: 80%;
+    margin: 15px auto;
+    padding: 14px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    animation: fadeUp 1s ease;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   MEDIA POLISH
+========================= */
+img {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.35);
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.25);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Online Resume Builder</h1>
+    <p class="highlight">Create professional resumes easily</p>
+</header>
+
+<nav>
+    <a href="resume.html" target="content">View Sample Resume</a> |
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
+    <a href="https://github.com" target="_blank">GitHub</a>
+</nav>
+
+<hr>
+
+<h2>Select Resume Section</h2>
+<img src="https://i.imgur.com/5RHR6Ku.png"
+     alt="Resume Sections"
+     usemap="#resumemap"
+     width="400"
+     style="display:block; margin:auto;">
+
+<map name="resumemap">
+    <area shape="rect" coords="0,0,200,100" href="#skills">
+    <area shape="rect" coords="200,0,400,100" href="#education">
+    <area shape="rect" coords="0,100,200,200" href="#experience">
+    <area shape="rect" coords="200,100,400,200" href="#contact">
+</map>
+
+<hr>
+
+<h2>Our Office Location</h2>
+<iframe 
+    src="https://maps.google.com/maps?q=DLF%20Downtown%20Chennai%20Tamil%20Nadu%20600113&output=embed"
+    width="400" height="250"
+    style="border:0; display:block; margin:auto;"
+    allowfullscreen>
+</iframe>
+
+<hr>
+
+<!-- ⭐ RESUME PREVIEW (UNCHANGED) -->
+<h2>Resume Preview</h2>
+<iframe name="content"
+        src="resume.html"
+        width="80%"
+        height="300"
+        style="display:block; margin:auto;">
+</iframe>
+
+<section id="skills">
+    <h3>Skills</h3>
+    <p>HTML, CSS, JavaScript, Python</p>
+</section>
+
+<section id="education">
+    <h3>Education</h3>
+    <p>Bachelor of Computer Applications</p>
+</section>
+
+<section id="experience">
+    <h3>Experience</h3>
+    <p>Web Developer Intern</p>
+</section>
+
+<section id="contact">
+    <h3>Contact</h3>
+    <p>Email: resume@builder.com</p>
+</section>
+
+</body>
+</html>
