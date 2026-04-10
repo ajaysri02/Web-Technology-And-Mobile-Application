@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero embedded-style">
+            <h1 style="color: #1a4a90;">Registration Form Validation</h1>
+            <p>Complete the form below. JavaScript validates each field before submission.</p>
+        </header>
+
+        <section class="section form-card">
+            <h2>Register</h2>
+            <form id="registrationForm" onsubmit="return validateRegistration()">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="resume-field" placeholder="Enter your first name">
+
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="resume-field" placeholder="Enter your last name">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" class="resume-field" placeholder="Enter a password">
+
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" class="resume-field" placeholder="name@domain.com">
+
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" class="resume-field" placeholder="10-digit mobile number">
+
+                <label for="address">Address</label>
+                <textarea id="address" class="resume-field" rows="4" placeholder="Enter your address"></textarea>
+
+                <button type="submit" class="primary-button">Submit Registration</button>
+            </form>
+
+            <div id="validationMessage" class="validation-message"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
