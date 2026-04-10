@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero embedded-style">
+            <h1 style="color: #1a4a90;">User Details Form</h1>
+            <p>Enter your name and age. The servlet will process the form and display the data.</p>
+        </header>
+
+        <section class="section form-card">
+            <h2>Submit Your Details</h2>
+            <form action="submitUser" method="post">
+                <label for="userName">Name</label>
+                <input type="text" id="userName" name="userName" class="resume-field" placeholder="Enter your name" required>
+
+                <label for="userAge">Age</label>
+                <input type="number" id="userAge" name="userAge" class="resume-field" placeholder="Enter your age" min="1" required>
+
+                <button type="submit" class="primary-button">Send to Servlet</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
