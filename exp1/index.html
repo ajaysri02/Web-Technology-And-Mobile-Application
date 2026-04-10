@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLF Downtown Chennai Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .embedded-style {
+            border: 2px dashed #2563eb;
+            padding: 18px;
+            border-radius: 16px;
+            background: rgba(37, 99, 235, 0.05);
+        }
+        .resume-frame {
+            width: 100%;
+            min-height: 340px;
+            border: 2px solid #1f4db4;
+            border-radius: 14px;
+        }
+        .hotspot-image {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            border: 2px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="hero embedded-style">
+            <h1 style="color: #1a4a90;">DLF Downtown Chennai Resume Builder</h1>
+            <p>Build your resume online and keep the DLF Downtown Chennai office location visible while you work.</p>
+        </header>
+
+        <div class="resume-grid">
+            <section id="resume-builder" class="section form-card">
+                <h2>Online Resume Builder</h2>
+                <form id="resumeForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="resume-field" placeholder="Enter your full name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="resume-field" placeholder="name@example.com">
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" class="resume-field" placeholder="+91 98765 43210">
+
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" class="resume-field" rows="4" placeholder="HTML, CSS, JavaScript, communication"></textarea>
+
+                    <label for="education">Education</label>
+                    <textarea id="education" class="resume-field" rows="3" placeholder="Degree, institute, year"></textarea>
+
+                    <label for="experience">Experience</label>
+                    <textarea id="experience" class="resume-field" rows="4" placeholder="Job title, company, responsibilities"></textarea>
+
+                    <button type="button" onclick="generateResume()" class="primary-button">Preview Resume</button>
+                </form>
+            </section>
+
+            <section id="resume-preview" class="section preview-card">
+                <h2>Resume Preview</h2>
+                <div id="preview">
+                    <h3 id="pname">Your Name Here</h3>
+                    <p id="pcontact">Email � Phone</p>
+                    <h4>Skills</h4>
+                    <p id="pskills">Add your key skills to show recruiters what you excel at.</p>
+                    <h4>Education</h4>
+                    <p id="peducation">Describe your education background and important coursework.</p>
+                    <h4>Experience</h4>
+                    <p id="pexperience">List your recent work experience and accomplishments.</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="map" class="section">
+            <h2>DLF Downtown Chennai Location</h2>
+            <iframe
+                class="resume-frame"
+                src="https://www.google.com/maps?q=DLF+Downtown+Chennai&output=embed"
+                loading="lazy"
+                title="DLF Downtown Chennai map">
+            </iframe>
+            <p>Embedded map showing the DLF Downtown Chennai office location. Use this to highlight your preferred work hub or project area.</p>
+        </section>
+
+        <section id="hotspot-map" class="section">
+            <h2>Chennai Hotspot Map</h2>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Map_of_Chennai_with_districts.png/1024px-Map_of_Chennai_with_districts.png"
+                usemap="#chennaimap"
+                alt="Chennai district map with hotspots"
+                class="hotspot-image">
+            <map name="chennaimap">
+                <area shape="circle" coords="520,310,35" href="https://en.wikipedia.org/wiki/Chennai" target="_blank" alt="Chennai City">
+                <area shape="rect" coords="500,200,570,270" href="https://en.wikipedia.org/wiki/Guindy" target="_blank" alt="Guindy">
+                <area shape="circle" coords="460,155,30" href="https://en.wikipedia.org/wiki/Anna_Nagar" target="_blank" alt="Anna Nagar">
+            </map>
+            <p>Click a hotspot to explore Chennai locations that are popular for offices and IT parks.</p>
+        </section>
+
+        <section class="section">
+            <h2>Quick Links</h2>
+            <ul class="map-area-list">
+                <li><a href="#resume-builder">Edit Resume</a></li>
+                <li><a href="#resume-preview">View Preview</a></li>
+                <li><a href="#map">See DLF Chennai</a></li>
+                <li><a href="https://www.dlf.in/" target="_blank" rel="noopener">DLF Official Site</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function generateResume() {
+            const name = document.getElementById('name').value || 'Your Name Here';
+            const email = document.getElementById('email').value || 'email@example.com';
+            const phone = document.getElementById('phone').value || '+91 98765 43210';
+            const skills = document.getElementById('skills').value || 'Add your key skills here.';
+            const education = document.getElementById('education').value || 'Add your education details here.';
+            const experience = document.getElementById('experience').value || 'Add your work experience here.';
+
+            document.getElementById('pname').textContent = name;
+            document.getElementById('pcontact').textContent = `${email} � ${phone}`;
+            document.getElementById('pskills').textContent = skills;
+            document.getElementById('peducation').textContent = education;
+            document.getElementById('pexperience').textContent = experience;
+        }
+    </script>
+</body>
+</html>
