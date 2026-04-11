@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET vs POST Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero embedded-style">
+            <h1 style="color: #1a4a90;">HTTP GET vs POST Demo</h1>
+            <p>Submit the same name and message using GET or POST to see how the servlet handles each method.</p>
+        </header>
+
+        <section class="section form-card">
+            <h2>GET Form</h2>
+            <form action="getpost" method="get">
+                <label for="nameGet">Name</label>
+                <input type="text" id="nameGet" name="name" class="resume-field" placeholder="Enter your name" required>
+
+                <label for="messageGet">Message</label>
+                <textarea id="messageGet" name="message" class="resume-field" rows="3" placeholder="Enter a short message" required></textarea>
+
+                <button type="submit" class="primary-button">Send with GET</button>
+            </form>
+        </section>
+
+        <section class="section form-card">
+            <h2>POST Form</h2>
+            <form action="getpost" method="post">
+                <label for="namePost">Name</label>
+                <input type="text" id="namePost" name="name" class="resume-field" placeholder="Enter your name" required>
+
+                <label for="messagePost">Message</label>
+                <textarea id="messagePost" name="message" class="resume-field" rows="3" placeholder="Enter a short message" required></textarea>
+
+                <button type="submit" class="primary-button">Send with POST</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Instructions</h2>
+            <p>The GET request appends form data to the URL, while the POST request sends data in the request body. Both are handled by the same servlet, but in different methods.</p>
+        </section>
+    </div>
+</body>
+</html>
