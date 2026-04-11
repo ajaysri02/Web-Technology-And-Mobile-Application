@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Session Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="hero embedded-style">
+            <h1 style="color: #1a4a90;">Login Demo with HttpSession</h1>
+            <p>Enter your credentials and watch the servlet track your session.</p>
+        </header>
+
+        <section class="section form-card">
+            <h2>Login</h2>
+            <form action="login" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="resume-field" placeholder="Enter username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="resume-field" placeholder="Enter password" required>
+
+                <button type="submit" class="primary-button">Sign In</button>
+            </form>
+
+            <p>Use <strong>user</strong> / <strong>pass123</strong> for the demo login.</p>
+        </section>
+    </div>
+</body>
+</html>
