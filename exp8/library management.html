@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System | Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html">LibraryMS</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="resume-builder.html">Builder</a>
+          <a href="user-form.html">Registration</a>
+          <a href="library-management.html">Library</a>
+          <a href="get-post-demo.html">HTTP Demo</a>
+          <a href="map-demo.html">Map Demo</a>
+          <a href="login.html">Login Demo</a>
+          <a href="preferences">Preferences</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-wrapper">
+      <section class="page-section container">
+        <div class="section-heading">
+          <h2>Library Management System</h2>
+          <p>
+            Complete client-side validation and servlet-backed processing for a comprehensive library system.
+            Register books and members through intelligent forms with real-time validation, then see the data persisted
+            to application storage through our robust Java backend.
+          </p>
+        </div>
+
+        <div class="demo-card">
+          <form id="book-form" class="registration-form" action="addBook" method="post" novalidate>
+            <h3>Add New Book</h3>
+            <div class="form-group">
+              <label for="book-title">Book Title</label>
+              <input id="book-title" name="bookTitle" type="text" placeholder="Enter book title" />
+              <div id="book-title-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-author">Author</label>
+              <input id="book-author" name="author" type="text" placeholder="Enter author name" />
+              <div id="book-author-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-isbn">ISBN</label>
+              <input id="book-isbn" name="isbn" type="text" placeholder="10 or 13 digit ISBN" />
+              <div id="book-isbn-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-year">Publication Year</label>
+              <input id="book-year" name="publicationYear" type="number" placeholder="2024" min="1450" max="2100" />
+              <div id="book-year-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-publisher">Publisher</label>
+              <input id="book-publisher" name="publisher" type="text" placeholder="Enter publisher" />
+              <div id="book-publisher-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="book-copies">Copies Available</label>
+              <input id="book-copies" name="copiesAvailable" type="number" placeholder="Enter number of copies" min="1" />
+              <div id="book-copies-error" class="error-message"></div>
+            </div>
+
+            <button type="submit">Submit New Book</button>
+            <div id="book-form-success" class="success-message"></div>
+          </form>
+
+          <form id="member-form" class="registration-form" action="registerMember" method="post" novalidate>
+            <h3>Register New Member</h3>
+            <div class="form-group">
+              <label for="member-name">Member Name</label>
+              <input id="member-name" name="memberName" type="text" placeholder="Enter member name" />
+              <div id="member-name-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-id">Member ID</label>
+              <input id="member-id" name="memberId" type="text" placeholder="Enter member ID" />
+              <div id="member-id-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-email">Email Address</label>
+              <input id="member-email" name="email" type="email" placeholder="name@domain.com" />
+              <div id="member-email-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-phone">Phone Number</label>
+              <input id="member-phone" name="phone" type="tel" placeholder="10-digit phone number" />
+              <div id="member-phone-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-type">Membership Type</label>
+              <select id="member-type" name="membershipType">
+                <option value="">Select membership</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="student">Student</option>
+              </select>
+              <div id="member-type-error" class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-address">Address</label>
+              <textarea id="member-address" name="address" placeholder="Enter member address"></textarea>
+              <div id="member-address-error" class="error-message"></div>
+            </div>
+
+            <button type="submit">Register Member</button>
+            <div id="member-form-success" class="success-message"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>Library Management System validation demo</p>
+        <p><a href="index.html">Back to Home</a></p>
+      </div>
+    </footer>
+
+    <script src="library-validation.js"></script>
+  </body>
+</html>
